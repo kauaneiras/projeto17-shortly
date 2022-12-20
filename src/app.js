@@ -5,6 +5,7 @@ import cors from 'cors';
 
 //import routes
 import { signuprouter } from './routes/signup.router.js';
+import { signinrouter } from './routes/signin.router.js';
 
 // dotenv config
 dotenv.config();
@@ -17,6 +18,7 @@ app.use(express.json());
 // app use the routes
 app.get('/', (req, res) => {res.send('Hello World!');});
 app.use(signuprouter);
+app.use(signinrouter);
 
 
 // app connection 
